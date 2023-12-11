@@ -18,9 +18,9 @@ class UserController
             $bool = (new User)->auth(Request::values());
 
             if ($bool === true) {
-                return redirect('');
+                return redirect('/');
             } else {
-                return redirect('login');
+                return redirect('/login');
             }
 
         } catch(\Throwable $th) {
@@ -34,7 +34,7 @@ class UserController
             session_start();
             session_unset();
             session_destroy();
-            return redirect('');
+            return redirect('/');
         }
     }
 }
