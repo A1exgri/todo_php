@@ -35,6 +35,6 @@ if (!function_exists('view')) {
 if(!function_exists('redirect')) {
     function redirect($uri)
     {
-        return header("Location: /{$uri}");
+        return header("Location: {$uri}");
     }
 }
