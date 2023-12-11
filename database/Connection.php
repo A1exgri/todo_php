@@ -14,7 +14,6 @@ class Connection
                 $config['username'],
                 $config['password']
             );
-            dd('testt');
         } catch (\Throwable $th) {
             die($th->getMessage());
         }
