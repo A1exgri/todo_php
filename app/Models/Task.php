@@ -43,7 +43,7 @@ class Task
             $stm->execute([$id]);
             $result = $stm->fetch(PDO::FETCH_COLUMN);
             $value = 0;
-            if ($result === 0) {
+            if ($result == 0) {
                 $value = 1;
             }
             $this->updateQuery($table, $value, $id);
